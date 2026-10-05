@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You | Walter White</title>
+    <link rel="stylesheet" href="new.css">
+</head>
+<body class="thank-you-page">
+    <main class="thank-you-content">
+        <p class="small-text">WALTER WHITE</p>
+        <h1>Thank you<span id="supporter-name"></span>!</h1>
+        <p>Your support means a lot.</p>
+        <a class="btn" href="new.html">Back to the story</a>
+    </main>
+    <script>
+        const name = new URLSearchParams(window.location.search).get("name")?.trim();
+        if (name) {
+            document.getElementById("supporter-name").textContent = `, ${name}`;
+        }
+    </script>
+</body>
+</html>
